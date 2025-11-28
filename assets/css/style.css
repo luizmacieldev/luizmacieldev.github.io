@@ -20,6 +20,9 @@
   height: auto;
 }
 
+.space-tecs {
+  margin: 10px 0 !important;
+}
 .tracker {
   /* visibility: hidden; */
   position: fixed;
@@ -690,5 +693,14 @@ small {
   }
   #intro.section {
     background-position-x: 30%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col.s12.m2 img {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
   }
 }
