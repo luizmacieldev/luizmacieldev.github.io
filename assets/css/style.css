@@ -82,6 +82,14 @@
   background-color: black;
 }
 
+/* iframe video */
+iframe {
+  display: block;
+  margin: 20px 0 20px 20px;
+  max-width: 100%;
+  float:none;
+}
+
 /* Buttons - Read Me, Contact Us */
 
 .readme {
@@ -308,12 +316,11 @@ h3 {
 .section {
   padding-bottom: 30px;
   padding-top: 0;
+
   position: relative;
 }
 
-.full-height {
-  height: 100vh;
-}
+
 
 /* Original */
 
@@ -324,15 +331,22 @@ h3 {
 
 #intro.section {
   background: #a7ffeb repeat;
-  position: relative;
+
 }
 
 #intro.section .container {
   color: white;
   font-weight: 200;
   left: 0;
-  position: absolute;
+  position: relative;
+  padding: 30px 40px;
   top: 0;
+}
+
+@media (max-width: 768px) {
+  #intro.section .container {
+    position: relative;
+  }
 }
 
 /* #intro.section .container *:not(span) {
@@ -365,6 +379,26 @@ h3 {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.intro-video {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16 / 9;
+  margin: 30px auto 0 auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .intro-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+
+    margin: 20px 0;
+  }
 }
 
 .waves-effect.waves-blue .waves-ripple {
@@ -702,5 +736,13 @@ small {
     height: auto;
     max-width: 300px;
     max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  iframe {
+    float: none !important;   /* 🔥 remove o float */
+    display: block;
+    margin: 20px auto;        /* 🔥 centraliza */
   }
 }
